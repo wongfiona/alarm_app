@@ -6,41 +6,86 @@
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 <style>
-.center {
+.center-card {
 text-align: center;
 border: solid;
 border-width: 2px;
 border-color: black;
-height: 10%;
+height: 20%;
+position: relative;
 }
 
+.center-card > div {
 
-.center > div:nth-of-type(1) {
+}
+
+.center-card > div > * {
+}
+
+.center-card > div:nth-of-type(1) {
 left: 0px;
 text-align:left;
 float:left;
 width: 5%;
+
+margin: 0;
+position: relative;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+min-height: 1px;
 }
-.center > div:nth-of-type(2) {
+.center-card > div:nth-of-type(2) {
 float:left;
 width: 90%;
 }
 
-.center > div:nth-of-type(3) {
+.center-card > div:nth-of-type(3) {
+display: block;
 right: 0px;
 text-align:right;
 float:left;
 width: 5%;
+
+margin: 0;
+position: relative;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+min-height: 1px;
 }
 </style>
 </head>
 <body>
-<div class="center">
+<div class="center-card" style="height:10%">
 	<div></div>
 	<div><h1>Menu</h1></div>
 	<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/440px-Hamburger_icon.svg.png" style="max-height: 25px;max-width: 25px;"></div>
 </div>
 	
+<div class="center-card">
+	<div></div>
+	<div>
+	
+	<h1>Weather</h1>
+	<div class="center-card">
+	<div><img src="https://image.flaticon.com/icons/svg/12/12414.svg" style="max-height: 25px;max-width: 25px;"></div>
+	
+		</div>
+	<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/440px-Hamburger_icon.svg.png" style="max-height: 25px;max-width: 25px;"></div>
+</div>
+
+<div class="center-card">
+	<div> </div>
+	<div><h1>Menu</h1></div>
+	<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/440px-Hamburger_icon.svg.png" style="max-height: 25px;max-width: 25px;"></div>
+</div>
+
+<div class="center-card">
+	<div></div>
+	<div><h1>Menu</h1></div>
+	<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/440px-Hamburger_icon.svg.png" style="max-height: 25px;max-width: 25px;"></div>
+</div>
 	
 <br><p>This should be on the next line</p><hr>
 </body>
