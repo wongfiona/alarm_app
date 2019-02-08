@@ -42,6 +42,12 @@ float:left;
 width: 90%;
 }
 
+.center-card > div:nth-of-type(2) > * {
+float:left;
+position:relative;
+left: 50%;
+}
+
 .center-card > div:nth-of-type(3) {
 display: block;
 right: 0px;
@@ -72,19 +78,17 @@ min-height: 1px;
 <div class="center-card">
 	<div></div>
 	<div>
-		<div style="position:relative;">
-			<div style="background-color:red;">
-				<h1>Good Morning!</h1>
-				<br>
-				<h2>8:00 AM</h2>
-				</div>
-		<div style="float:left;position:relative;">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/440px-Hamburger_icon.svg.png" style="max-height: 25px;max-width: 25px;">
+		<div style="float:left;">
+			<h1>Good Morning!</h1>
+			<h2>8:00 AM</h2>
 			</div>
+		<div style="float:left;position:relative; width:60%">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/440px-Hamburger_icon.svg.png" style="max-height: 25px;max-width: 25px;">
+			<br>
 			<label class="switch">
 			<input type="checkbox">
 			<span class="slider round"></span>
-				</label>
+			</label>
 			</div>
 		</div>
 	</div>
