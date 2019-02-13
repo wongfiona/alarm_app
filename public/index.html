@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Test Page</title>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<head>
+		<title>Test Page</title>
+		<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	</head>
 
-</head>
-<body>
+	<body>
 
-	<div class="card" style="width: 100%">
-	<div class="card-body">
-		<h2 class="card-title" align="center">Good Morning!</h2>
-		<h3 align="center">8:00AM</h3>
-		<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon">
-		<p class="card-text">First card</p>
-	</div>
-</div>
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+		  <a class="navbar-brand" href="#">Navbar</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Alarms</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Weather</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Trips</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
 
-	<div class="card" style="width: 100%">
-  <div class="card-body">
-		<h3 class="card-title" align="center">Weather</h3>
-		<img class="img-fluid" src="..." alt="Weather">
-    <p class="card-text">Weather card</p>
-  </div>
-	</div>
+		<div class="card" style="width: 100%">
+			<div class="card-body">
+				<h2 class="card-title" align="center">Good Morning!</h2>
+				<h3 align="center"><img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">8:00AM</h3>
+				<p class="card-text">First card</p>
+			</div>
+		</div>
 
-	<div class="card" style="width: 100%">
-  <div class="card-body">
-		<h3 align="center">Trips</h3>
-		<img class="img-fluid" src="..." alt="Map">
-    <p class="card-text">Trips card</p>
-  </div>
-	</div>
+		<div class="card" style="width: 100%">
+		  <div class="card-body">
+				<h3 class="card-title" align="center">Weather</h3>
+				<img class="img-fluid" src="..." alt="Weather">
+		    <p class="card-text">Weather card</p>
+		  </div>
+		</div>
 
-</body>
+		<div class="card" style="width: 100%">
+		  <div class="card-body">
+				<h3 align="center">Trips</h3>
+				<img class="img-fluid" src="..." alt="Map">
+		    <p class="card-text">Trips card</p>
+		  </div>
+		</div>
+
+	</body>
 </html>
