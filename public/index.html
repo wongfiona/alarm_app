@@ -1,114 +1,41 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Test Page</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-<style>
-.center-card {
-text-align: center;
-border: solid;
-border-width: 2px;
-border-color: black;
-height: 20%;
-position: relative;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
-.center-card > div {
-border:solid;
-
-}
-
-.center-card > div > * {
-}
-
-.center-card > div:nth-of-type(1) {
-left: 0px;
-text-align:left;
-float:left;
-width: 5%;
-
-margin: 0;
-position: relative;
-top: 50%;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
-min-height: 1px;
-}
-.center-card > div:nth-of-type(2) {
-position:relative;
-float:left;
-width: 90%;
-}
-
-.center-card > div:nth-of-type(2) > * {
-float:left;
-position:relative;
-left: 50%;
-}
-
-.center-card > div:nth-of-type(3) {
-display: block;
-right: 0px;
-text-align:right;
-float:left;
-width: 5%;
-
-margin: 0;
-position: relative;
-top: 50%;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
-min-height: 1px;
-}
-
-.weather-card {
-
-}
-</style>
 </head>
 <body>
-<div class="center-card" style="height:10%">
-	<div></div>
-	<div><h1>Menu</h1></div>
-	<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/440px-Hamburger_icon.svg.png" style="max-height: 25px;max-width: 25px;"></div>
-</div>
 
-<div class="center-card">
-	<div></div>
-	<div>
-		<div style="float:left;">
-			<h1>Good Morning!</h1>
-			<h2>8:00 AM</h2>
-			</div>
-		<div style="float:left;position:relative; width:60%">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/440px-Hamburger_icon.svg.png" style="max-height: 25px;max-width: 25px;">
-			<br>
-			<label class="switch">
-			<input type="checkbox">
-			<span class="slider round"></span>
-			</label>
-			</div>
-		</div>
+	<div class="card" style="width: 100%">
+	<div class="card-body">
+		<h2 class="card-title" align="center">Good Morning!</h2>
+		<h3 align="center">8:00AM</h3>
+		<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon">
+		<p class="card-text">First card</p>
 	</div>
-	<div></div>
 </div>
 
-<div class="center-card">
-	<div> </div>
-	<div><h1>Menu</h1></div>
-	<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/440px-Hamburger_icon.svg.png" style="max-height: 25px;max-width: 25px;"></div>
-</div>
+	<div class="card" style="width: 100%">
+  <div class="card-body">
+		<h3 class="card-title" align="center">Weather</h3>
+		<img class="img-fluid" src="..." alt="Weather">
+    <p class="card-text">Weather card</p>
+  </div>
+	</div>
 
-<div class="center-card">
-	<div></div>
-	<div><h1>Menu</h1></div>
-	<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/440px-Hamburger_icon.svg.png" style="max-height: 25px;max-width: 25px;"></div>
-</div>
+	<div class="card" style="width: 100%">
+  <div class="card-body">
+		<h3 align="center">Trips</h3>
+		<img class="img-fluid" src="..." alt="Map">
+    <p class="card-text">Trips card</p>
+  </div>
+	</div>
 
-<br><p>This should be on the next line</p><hr>
 </body>
 </html>
