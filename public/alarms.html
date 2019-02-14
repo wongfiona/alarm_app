@@ -9,12 +9,19 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+		<script>
+			function goBack(){
+				window.history.back();
+			}
+		</script>
+
 	</head>
 
 	<body>
 
 		<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-		  <a class="navbar-brand" href="#">Navbar</a>
+		  <a class="navbar-brand" href="index.html">Navbar</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -33,13 +40,18 @@
 		  </div>
 		</nav>
 
+		<div class="container-fluid">
+			<button type="button" class="btn btn-outline-light text-dark btn-sm" onclick="goBack()">&lt; Back</button>
+			<h2 align="center">Alarms</h2>
+		</div>
+
 		<div class="card" style="width: 100%">
 			<div class="card-body">
-				<h2 class="card-title" align="center">Good Morning!</h2>
-				<h3 align="center"><img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">8:00AM</h3>
+				<h3 class="card-title" align="left">
+					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">8:00AM</h3>
 
 				<!-- Rounded switch -->
-				<label class="switch display-right">
+				<label class="switch">
 				  <input type="checkbox" checked>
 				  <span class="slider round"></span>
 				</label>
@@ -49,19 +61,33 @@
 		</div>
 
 		<div class="card" style="width: 100%">
-		  <div class="card-body">
-				<h3 class="card-title" align="center">Weather</h3>
-				<img class="img-fluid" src="..." alt="Weather">
-		    <p class="card-text">Weather card</p>
-		  </div>
+			<div class="card-body">
+				<h3 class="card-title" align="left">
+					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">9:00AM</h3>
+
+				<!-- Rounded switch -->
+				<label class="switch">
+				  <input type="checkbox">
+				  <span class="slider round"></span>
+				</label>
+
+				<p class="card-text">Second card</p>
+			</div>
 		</div>
 
 		<div class="card" style="width: 100%">
-		  <div class="card-body">
-				<h3 align="center">Trips</h3>
-				<img class="img-fluid" src="..." alt="Map">
-		    <p class="card-text">Trips card</p>
-		  </div>
+			<div class="card-body">
+				<h3 class="card-title" align="left">
+					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">10:00AM</h3>
+
+				<!-- Rounded switch -->
+				<label class="switch">
+				  <input type="checkbox">
+				  <span class="slider round"></span>
+				</label>
+
+				<p class="card-text">Third card</p>
+			</div>
 		</div>
 
 	</body>
