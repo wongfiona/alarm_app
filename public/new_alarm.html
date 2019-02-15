@@ -42,52 +42,19 @@
 
 		<div class="container-fluid">
 			<button class="btn btn-sm" onclick="goBack()">&#8249; Back</button>
-			<a href="new_alarm.html"><button class="addButton">+</button></a>
-			<h2 align="center">Alarms</h2>
+			<h2 align="center">Add New Alarm</h2>
 		</div>
 
 		<div class="card" style="width: 100%">
 			<div class="card-body">
-				<h3 class="card-title" align="left">
-					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">8:00AM</h3>
 
-				<!-- Rounded switch -->
-				<label class="switch">
-				  <input type="checkbox" checked>
-				  <span class="slider round"></span>
-				</label>
+				<form>
+					Set Time: <input type="time"><br><br>
+					Enter alarm name or message: <br>
+					<input class="form-control input-sm" id="inputsm" type="text"><br>
+					<a href="alarms.html"<button type="button" class="btn btn-outline-dark">Save</button></a>
+				</form>
 
-				<p class="card-text">Wake up for COGS 120!</p>
-			</div>
-		</div>
-
-		<div class="card" style="width: 100%">
-			<div class="card-body">
-				<h3 class="card-title" align="left">
-					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">9:00AM</h3>
-
-				<!-- Rounded switch -->
-				<label class="switch">
-				  <input type="checkbox">
-				  <span class="slider round"></span>
-				</label>
-
-				<p class="card-text">Alarm</p>
-			</div>
-		</div>
-
-		<div class="card" style="width: 100%">
-			<div class="card-body">
-				<h3 class="card-title" align="left">
-					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">10:00AM</h3>
-
-				<!-- Rounded switch -->
-				<label class="switch">
-				  <input type="checkbox">
-				  <span class="slider round"></span>
-				</label>
-
-				<p class="card-text">Alarm</p>
 			</div>
 		</div>
 
