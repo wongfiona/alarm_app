@@ -9,9 +9,17 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+		<script>
+			function goBack(){
+				window.history.back();
+			}
+		</script>
+
 	</head>
 
 	<body>
+
 		<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
 		  <a class="navbar-brand" href="index.html">Home</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -32,36 +40,34 @@
 		  </div>
 		</nav>
 
+		<div class="container-fluid">
+			<button class="btn btn-sm" onclick="goBack()">&#8249; Back</button>
+			<button class="addButton">+</button>
+			<h2 align="center">Weather</h2>
+		</div>
+
 		<div class="card" style="width: 100%">
 			<div class="card-body">
-				<h2 class="card-title" align="center">Good Morning!</h2>
-				<h3 align="center"><img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">
-					<a href=alarms.html>8:00AM<a></h3>
-
-				<!-- Rounded switch -->
-				<label class="switch">
-				  <input type="checkbox" checked>
-				  <span class="slider round"></span>
-				</label>
-
+				<h4 class="card-title"> La Jolla</h4>
+				<p><img class="img-fluid" src="images/rain.png" alt="Weather icon" width="80px">Light Showers</p>
 				<p class="card-text">First card</p>
 			</div>
 		</div>
 
 		<div class="card" style="width: 100%">
-		  <div class="card-body">
-				<h3 class="card-title" align="center"><a href="weather.html">Weather<a></h3>
-				<img class="img-fluid" src="..." alt="Weather">
-		    <p class="card-text">Weather card</p>
-		  </div>
+			<div class="card-body">
+				<h4 class="card-title">San Diego</h4>
+				<p><img class="img-fluid" src="images/rain.png" alt="Weather icon" width="80px">Light Showers</p>
+				<p class="card-text">Second card</p>
+			</div>
 		</div>
 
 		<div class="card" style="width: 100%">
-		  <div class="card-body">
-				<h3 class="card-title" align="center"><a href="trips.html">Trips</a></h3>
-				<img class="img-fluid" src="..." alt="Map">
-		    <p class="card-text">Trips card</p>
-		  </div>
+			<div class="card-body">
+				<h4 class="card-title">San Francisco</h4>
+				<p><img class="img-fluid" src="images/rain.png" alt="Weather icon" width="80px">Heavy Rain</p>
+				<p class="card-text">Third card</p>
+			</div>
 		</div>
 
 	</body>
