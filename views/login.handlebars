@@ -12,32 +12,23 @@
 </head>
 
 <body class="text-center">
-  <div class="container">
-    <div class="row">
-        <div class="form_bg" id="form1">
-            <form>
-                 <h2 class="text-center">Login Page</h2>
-                <br/>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="userid" placeholder="User id">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" placeholder="Password">
-                </div>
-                <br/>
-                <div class="align-center">
-                    <button onclick="form_submit()" type="submit" class="btn btn-default" id="login">Login</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-  <script>
-  function form_submit(){
-    console.log("here")
-    document.getElementById("form1").submit();
-    window.location.href = "index.html";
-  }
-</script>
-</body>
+  <form class="form-signin">
+      <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+  </form>
+  <button onclick="form_submit()" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <script>
+    function form_submit(){
+      window.location.href = "index.html";
+    }
+    </script>
 </html>
