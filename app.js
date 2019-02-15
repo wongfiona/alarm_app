@@ -12,6 +12,9 @@ var login = require('./routes/login');
 // Example route
 // var user = require('./routes/user');
 
+var alarms = require('./routes/alarms');
+
+
 var app = express();
 
 // all environments
@@ -35,6 +38,10 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', login.view);
+// Example route
+// app.get('/users', user.list);
+
+app.get('/alarms.html', alarms.view);
 // Example route
 // app.get('/users', user.list);
 

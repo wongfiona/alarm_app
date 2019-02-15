@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Test Page</title>
+		<title>Test Page 2.0</title>
 		<meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -9,9 +9,17 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+		<script>
+			function goBack(){
+				window.history.back();
+			}
+		</script>
+
 	</head>
 
 	<body>
+
 		<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
 		  <a class="navbar-brand" href="index.html">Home</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -32,11 +40,17 @@
 		  </div>
 		</nav>
 
-		<div class="card" style="width: 100%">
+		<div class="container-fluid">
+			<button class="btn btn-sm" onclick="goBack()">&#8249; Back</button>
+			<a href="new_alarm.html"><button class="addButton">+</button></a>
+			<h2 align="center">Alarms</h2>
+		</div>
+
+{{#each alarms}}
+		<div class="card" id="{{alarmID}}" style="width: 100%">
 			<div class="card-body">
-				<h2 class="card-title" align="center">Good Morning!</h2>
-				<h3 align="center"><img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">
-					<a href="alarms.html">8:00AM<a></h3>
+				<h3 class="card-title" align="left">
+					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">{{alarmTime}}</h3>
 
 				<!-- Rounded switch -->
 				<label class="switch">
@@ -44,25 +58,10 @@
 				  <span class="slider round"></span>
 				</label>
 
-				<p class="card-text">First card</p>
+				<p class="card-text">{{alarmName}}</p>
 			</div>
 		</div>
-
-		<div class="card" style="width: 100%">
-		  <div class="card-body">
-				<h3 class="card-title" align="center"><a href="weather.html">Weather<a></h3>
-				<img class="img-fluid" src="..." alt="Weather">
-		    <p class="card-text">Weather card</p>
-		  </div>
-		</div>
-
-		<div class="card" style="width: 100%">
-		  <div class="card-body">
-				<h3 class="card-title" align="center"><a href="trips.html">Trips</a></h3>
-				<img class="img-fluid" src="..." alt="Map">
-		    <p class="card-text">Trips card</p>
-		  </div>
-		</div>
+{{/each}}
 
 	</body>
 </html>
