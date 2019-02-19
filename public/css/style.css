@@ -1,9 +1,9 @@
-label {
-  float: right;
-}
-
 #alarms, #weather, #trips {
   text-align: center;
+}
+
+.switch {
+  float: right;
 }
 
 .addButton {
@@ -72,4 +72,19 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* Login page styling */
+.background {
+  background-image: url("/images/alarm-bg.jpg");
+
+}
+
+.app-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.remember {
+  float: left;
 }
