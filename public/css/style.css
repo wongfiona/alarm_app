@@ -2,6 +2,10 @@ label {
   float: right;
 }
 
+#alarms, #weather, #trips {
+  text-align: center;
+}
+
 .addButton {
   float: right;
   font-size: 25px;

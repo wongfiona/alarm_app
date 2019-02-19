@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Test Page</title>
+		<title>Alarmio</title>
 		<meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -36,6 +36,12 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="trips.html">Trips</a>
 		      </li>
+					<li class="nav-item">
+		        <a class="nav-link" href="...">Account</a>
+		      </li>
+					<li class="nav-item">
+		        <a class="nav-link" href="...">Log Out</a>
+		      </li>
 		    </ul>
 		  </div>
 		</nav>
@@ -46,18 +52,23 @@
 			<h2 align="center">Trips</h2>
 		</div>
 
-		<div class="card" style="width: 100%">
+		<div class="card" id="selectedTrip" style="width: 100%">
 			<div class="card-body">
 				<h4 class="card-title"> Home to School</h4>
-				<img class="img-fluid" src="..." alt="Map" width="80px">
-				<p class="card-text">First card</p>
+				<img class="img-fluid center" src="images/map.jpg" alt="Map" width="155px">
+				<br><br>
+				<h5>Starting Location:</h5>
+				<p>123 Regents Rd</p>
+				<h5>Destination:</h5>
+				<p>UCSD</p>
 			</div>
 		</div>
 
 		<div class="card" style="width: 100%">
 			<div class="card-body">
 				<h4 class="card-title">School to Home</h4>
-				<img class="img-fluid" src="..." alt="Map" width="80px">
+				<img class="img-fluid center" src="images/map.jpg" alt="Map" width="155px">
+				<br><br>
 				<p class="card-text">Second card</p>
 			</div>
 		</div>
@@ -65,7 +76,8 @@
 		<div class="card" style="width: 100%">
 			<div class="card-body">
 				<h4 class="card-title">Home to Grocery Store</h4>
-				<img class="img-fluid" src="..." alt="Map" width="80px">
+				<img class="img-fluid center" src="images/map.jpg" alt="Map" width="155px">
+				<br><br>
 				<p class="card-text">Third card</p>
 			</div>
 		</div>
