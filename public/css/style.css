@@ -76,15 +76,31 @@ input:checked + .slider:before {
 
 /* Login page styling */
 .background {
-  background-image: url("/images/alarm-bg.jpg");
-
+  background-color: #F6F6F6;
+  background-image: url("/images/alarm-bg-cut.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
 }
 
 .app-title {
+  text-align: center;
   font-size: 50px;
   font-weight: bold;
+  color: #F2B4B5;
 }
+
+#inputEmail{
+  margin-bottom: 10px;
+}
+
+.sign-in {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 
 .remember {
   float: left;
+  margin-top: 10px;
 }
