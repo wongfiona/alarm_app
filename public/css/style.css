@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.links {
+  color: #F2B4B5;
+}
+
+.subheading {
+  color: #8DD4D2;
+}
+
 .switch {
   float: right;
 }
@@ -52,11 +60,11 @@
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #8DD4D2;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #8DD4D2;
 }
 
 input:checked + .slider:before {
