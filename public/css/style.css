@@ -119,12 +119,14 @@
 /* Back button styling */
 .back-button {
   color: white;
+  margin-left: -15px;
 }
 
 /* Add button styling */
 .addButton {
   float: right;
   font-size: 25px;
+  margin-right: -10px;
 }
 
 /* The switch - the box around the slider */
