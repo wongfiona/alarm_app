@@ -1,3 +1,4 @@
+/* Links class for home screen headings + page headings */
 .links {
   color: white;
   text-transform: uppercase;
@@ -5,7 +6,7 @@
   font-weight: bold;
 }
 
-/* Colors:
+/* Colors and hex codes:
   pink #F2B4B5;
   light pink #FFD1D1;
   blue #8DD4D2;
@@ -40,6 +41,7 @@
 /* Weather card body on home screen */
 .weather {
   background-color: #AAE0DE;
+  padding-left: 30px;
   margin: 15px 3px;
 }
 
@@ -52,6 +54,7 @@
 /* Trips card body on home screen */
 .trips {
   background-color: lightsteelblue;
+  padding-left: 30px;
   margin: 15px 3px;
 }
 
@@ -99,6 +102,11 @@
   color: black;
 }
 
+.add-weather {
+  background-color: #8DD4D2;
+  color: white;
+}
+
 /* Trips Page */
 .trips-page-header {
   background-color: lightsteelblue;
@@ -114,6 +122,11 @@
 .card-body-trips h5, p {
   color: black;
   text-align: left;
+}
+
+.add-trip {
+  background-color: lightsteelblue;
+  color: white;
 }
 
 /* Back button styling */
