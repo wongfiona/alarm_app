@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Alarmio</title>
+		<title>Test Page 2.0</title>
 		<meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -20,7 +20,7 @@
 
 	<body>
 
-		<nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
 		  <a class="navbar-brand" href="index.html">Home</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 		    <span class="navbar-toggler-icon"></span>
@@ -36,34 +36,32 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="trips.html">Trips</a>
 		      </li>
-					<li class="nav-item">
-		        <a class="nav-link" href="...">Log Out</a>
-		      </li>
 		    </ul>
 		  </div>
 		</nav>
 
-		<div class="container-fluid alarms-page-header">
-			<button class="btn btn-lg back-button" onclick="goBack()">&#8249; Back</button>
-			<h2 class="links" align="center">Add New Alarm</h2>
+		<div class="container-fluid">
+			<button class="btn btn-sm" onclick="goBack()">&#8249; Back</button>
+			<a href="new_alarm.html"><button class="addButton">+</button></a>
+			<h2 align="center">Alarms</h2>
 		</div>
 
-		<div class="card" style="width: 100%">
+{{#each alarms}}
+		<div class="card" id="{{weatherID}}" style="width: 100%">
 			<div class="card-body">
-			<form id="addAlarmForm" role="form" method="get" action="/add_alarm">
-				<h3>Add a Alarm</h3>
-				<div class="form-group">
-					<label for="time">Time:</label>
-					<input type="time" class="form-control" id="time" placeholder="Time" name="time">
-				</div>
-				<div class="form-group">
-					<label for="description">Description:</label>
-					<input type="text" class="form-control" id="description" placeholder="Description" name="description">
-				</div>
-				<input type="submit" id="submitBtn" class="btn btn-default" value="Add Alarm"></input>
-			</form>
+				<h3 class="card-title" align="left">
+					<img class="img-fluid" src="images/rain.png" alt="weather icon" style="float:right">{{location}}</h3>
+
+				<!-- Rounded switch -->
+				<label class="switch">
+				  <input type="checkbox" checked>
+				  <span class="slider round"></span>
+				</label>
+
+				<p class="card-text">{{condition}}</p>
 			</div>
 		</div>
+{{/each}}
 
 	</body>
 </html>
