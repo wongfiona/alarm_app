@@ -20,7 +20,7 @@
 
 	<body>
 
-		<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+		<nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
 		  <a class="navbar-brand" href="index.html">Home</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 		    <span class="navbar-toggler-icon"></span>
@@ -37,23 +37,20 @@
 		        <a class="nav-link" href="trips.html">Trips</a>
 		      </li>
 					<li class="nav-item">
-		        <a class="nav-link" href="settings.html">Settings</a>
-		      </li>
-					<li class="nav-item">
 		        <a class="nav-link" href="...">Log Out</a>
 		      </li>
 		    </ul>
 		  </div>
 		</nav>
 
-		<div class="container-fluid">
-			<button class="btn btn-sm" onclick="goBack()">&#8249; Back</button>
+		<div class="container-fluid trips-page-header">
+			<button class="btn btn-lg back-button" onclick="goBack()">&#8249; Back</button>
 			<a href="new_trips.html"><button class="addButton">+</button></a>
 			<h2 class="links" align="center">Trips</h2>
 		</div>
 
-		<div class="card" id="selectedTrip" style="width: 100%">
-			<div class="card-body">
+		<div class="container" style="width: 100%">
+			<div class="card-body-trips">
 				<h4 class="card-title"> Home to School</h4>
 				<img class="img-fluid center" src="images/map.jpg" alt="Map" width="155px">
 				<br><br>
@@ -61,24 +58,42 @@
 				<p>123 Regents Rd</p>
 				<h5>Destination:</h5>
 				<p>UCSD</p>
+				<h5>Current Traffic:</h5>
+				<p>Heavy</p>
+				<h5>Time Estimated:</h5>
+				<p>20 minutes</p>
 			</div>
 		</div>
 
-		<div class="card" style="width: 100%">
-			<div class="card-body">
+		<div class="container" style="width: 100%">
+			<div class="card-body-trips">
 				<h4 class="card-title">School to Home</h4>
 				<img class="img-fluid center" src="images/map.jpg" alt="Map" width="155px">
 				<br><br>
-				<p class="card-text">Second card</p>
+				<h5>Starting Location:</h5>
+				<p>UCSD</p>
+				<h5>Destination:</h5>
+				<p>123 Regents Rd</p>
+				<h5>Current Traffic:</h5>
+				<p>Heavy</p>
+				<h5>Time Estimated:</h5>
+				<p>15 minutes</p>
 			</div>
 		</div>
 
-		<div class="card" style="width: 100%">
-			<div class="card-body">
+		<div class="container" style="width: 100%">
+			<div class="card-body-trips">
 				<h4 class="card-title">Home to Grocery Store</h4>
 				<img class="img-fluid center" src="images/map.jpg" alt="Map" width="155px">
 				<br><br>
-				<p class="card-text">Third card</p>
+				<h5>Starting Location:</h5>
+				<p>123 Regents Rd</p>
+				<h5>Destination:</h5>
+				<p>Vons</p>
+				<h5>Current Traffic:</h5>
+				<p>Moderate</p>
+				<h5>Time Estimated:</h5>
+				<p>8 minutes</p>
 			</div>
 		</div>
 
