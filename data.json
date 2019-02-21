@@ -1,10 +1,5 @@
-{"alarms": [
-{"alarmName": "Cogs 120 Midterm Day",
-"alarmTime": "08:00",
-"alarmID":"alarm1"},
-{"alarmName": "These Alarms are JSON loaded, briskie",
-"alarmTime": "13:37",
-"alarmID":"alarm1"}
-
-
-]}
+{
+  "alarms": [],
+  "weather": [],
+  "trips": []
+}

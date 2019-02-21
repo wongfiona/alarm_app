@@ -9,11 +9,11 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var login = require('./routes/login');
+var alarms = require('./routes/alarms');
+var add_alarm = require('./routes/add_alarm');
+//var add_weather = require('./routes/add_weather');
 // Example route
 // var user = require('./routes/user');
-
-var alarms = require('./routes/alarms');
-
 
 var app = express();
 
@@ -38,10 +38,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', login.view);
-// Example route
-// app.get('/users', user.list);
-
 app.get('/alarms.html', alarms.view);
+app.get('/add_alarm', add_alarm.addAlarm);
 // Example route
 // app.get('/users', user.list);
 
