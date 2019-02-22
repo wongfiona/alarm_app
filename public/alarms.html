@@ -20,7 +20,7 @@
 
 	<body>
 
-		<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+		<nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
 		  <a class="navbar-brand" href="index.html">Home</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 		    <span class="navbar-toggler-icon"></span>
@@ -37,25 +37,24 @@
 		        <a class="nav-link" href="trips.html">Trips</a>
 		      </li>
 					<li class="nav-item">
-		        <a class="nav-link" href="settings.html">Settings</a>
-		      </li>
-					<li class="nav-item">
 		        <a class="nav-link" href="...">Log Out</a>
 		      </li>
 		    </ul>
 		  </div>
 		</nav>
 
-		<div class="container-fluid">
-			<button class="btn btn-sm" onclick="goBack()">&#8249; Back</button>
+		<div class="container alarms-page-header">
+			<button class="btn btn-lg back-button" onclick="goBack()">&#8249; Back</button>
 			<a href="new_alarm.html"><button class="addButton">+</button></a>
 			<h2 class="links" align="center">Alarms</h2>
 		</div>
 
-		<div class="card" style="width: 100%">
+		<br>
+
+		<div class="container alarms-page" style="width: 100%">
 			<div class="card-body">
-				<h3 class="card-title" align="left">
-					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">8:00AM</h3>
+				<h3 class="card-title">
+					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">6:00AM</h3>
 
 				<!-- Rounded switch -->
 				<label class="switch">
@@ -67,9 +66,11 @@
 			</div>
 		</div>
 
-		<div class="card" style="width: 100%">
+		<br>
+
+		<div class="container alarms-page" style="width: 100%">
 			<div class="card-body">
-				<h3 class="card-title" align="left">
+				<h3 class="card-title">
 					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">9:00AM</h3>
 
 				<!-- Rounded switch -->
@@ -82,9 +83,11 @@
 			</div>
 		</div>
 
-		<div class="card" style="width: 100%">
+		<br>
+
+		<div class="container alarms-page" style="width: 100%">
 			<div class="card-body">
-				<h3 class="card-title" align="left">
+				<h3 class="card-title">
 					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">10:00AM</h3>
 
 				<!-- Rounded switch -->
@@ -96,6 +99,8 @@
 				<p class="card-text">Alarm</p>
 			</div>
 		</div>
+
+		<br>
 
 	</body>
 </html>

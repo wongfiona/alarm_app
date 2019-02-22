@@ -1,22 +1,145 @@
-#alarms, #weather, #trips {
-  text-align: center;
-}
-
+/* Links class for home screen headings + page headings */
 .links {
-  color: #F2B4B5;
+  color: white;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.subheading {
-  color: #8DD4D2;
+/* Colors and hex codes:
+  pink #F2B4B5;
+  light pink #FFD1D1;
+  blue #8DD4D2;
+  light blue #AAE0DE;
+  lightsteelblue #B0C4DE;
+  lighter ^ #D2DFEF;
+} */
+
+/* Alarms card body on home screen */
+.alarms {
+  background-color: #F2B4B5;
+  padding: 30px 25px 20px 25px;
+  margin: 15px 3px;
 }
 
-.switch {
-  float: right;
+.alarms h2 {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
+.alarms p {
+  text-align: right;
+  color: white;
+}
+
+.alarms h2, h3, button, p,
+.weather h4,
+.trips h4, h5 {
+  color: white;
+}
+
+/* Weather card body on home screen */
+.weather {
+  background-color: #AAE0DE;
+  padding-left: 30px;
+  margin: 15px 3px;
+}
+
+.weather p, h4,
+.trips p, h5 {
+  text-align: center;
+  color: white;
+}
+
+/* Trips card body on home screen */
+.trips {
+  background-color: lightsteelblue;
+  padding-left: 30px;
+  margin: 15px 3px;
+}
+
+.trips h4 {
+  text-align: left;
+}
+
+/* Alarms Page */
+.alarms-page-header {
+  background-color: #F2B4B5;
+  padding-bottom: 10px;
+}
+
+.alarms-box {
+  background-color: #FFD1D1;
+  margin: 20px 5px 10px 10px;
+}
+
+.alarms-page h3, p {
+  text-align: left;
+}
+
+.card-title {
+  color: black;
+}
+
+.add-alarm {
+  background-color: #F2B4B5;
+  color: white;
+}
+
+/* Weather Page */
+.weather-page-header {
+  background-color: #8DD4D2;
+  padding-bottom: 10px;
+}
+
+.card-body-weather {
+  background-color: #AAE0DE;
+  padding: 25px 10px 5px 10px;
+  margin: 20px 5px 10px 10px;
+}
+
+.weather-page h4, p {
+  color: black;
+}
+
+.add-weather {
+  background-color: #8DD4D2;
+  color: white;
+}
+
+/* Trips Page */
+.trips-page-header {
+  background-color: lightsteelblue;
+  padding-bottom: 10px;
+}
+
+.card-body-trips {
+  background-color: #D2DFEF;
+  padding: 20px 20px;
+  margin: 20px 5px;
+}
+
+.card-body-trips h5, p {
+  color: black;
+  text-align: left;
+}
+
+.add-trip {
+  background-color: lightsteelblue;
+  color: white;
+}
+
+/* Back button styling */
+.back-button {
+  color: white;
+  margin-left: -15px;
+}
+
+/* Add button styling */
 .addButton {
   float: right;
   font-size: 25px;
+  margin-right: -10px;
 }
 
 /* The switch - the box around the slider */
@@ -25,6 +148,8 @@
   display: inline-block;
   width: 45px;
   height: 25px;
+  float: right;
+  margin-top: 10px;
 }
 
 /* Hide default HTML checkbox */
@@ -60,11 +185,11 @@
 }
 
 input:checked + .slider {
-  background-color: #8DD4D2;
+  background-color: #2196F3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #8DD4D2;
+  box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked + .slider:before {
