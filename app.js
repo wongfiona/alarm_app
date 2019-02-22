@@ -10,7 +10,9 @@ var handlebars = require('express3-handlebars')
 
 var login = require('./routes/login');
 var alarms = require('./routes/alarms');
+var weather = require('./routes/weather');
 var add_alarm = require('./routes/add_alarm');
+var add_weather = require('./routes/add_weather');
 //var add_weather = require('./routes/add_weather');
 // Example route
 // var user = require('./routes/user');
@@ -40,6 +42,9 @@ if ('development' == app.get('env')) {
 app.get('/', login.view);
 app.get('/alarms.html', alarms.view);
 app.get('/add_alarm', add_alarm.addAlarm);
+
+app.get('/weather.html', weather.view);
+app.get('/add_weather', add_weather.addWeather);
 // Example route
 // app.get('/users', user.list);
 

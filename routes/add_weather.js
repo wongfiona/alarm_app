@@ -13,42 +13,36 @@
 // It requires installing node-fetch from the terminal
 //  npm install node-fetch
 // Then add a require statement at the top of our script
-/*
-var data = require('../data.json');
+
+var data1 = require('../data.json');
 //let fetch = require('node-fetch');
-
-//let uri = 'http://jsonplaceholder.typicode.com/users';
-let darksky = 'https://api.darksky.net/forecast/';
-let key = 'bc02564c54e3ec592f5c5c04e01f7b6a';
-let lat = 45.3483;
-let lng = -75.7584;
-let uri = darksky + key + '/' + lat +','+ lng;
-console.log(uri);
-uri = uri.concat('?units=ca&exclude=minutely,hourly&lang=ru');
-// units - ca, si, us, uk
-// exclude - minutely,hourly,daily,currently
-// lang -
-let options = {
-    method: 'GET',
-    mode: 'cors'
-}
-let req = new fetch.Request(uri, options);
-
-fetch(req)
-    .then((response)=>{
-        if(response.ok){
-            return response.json();
-        }else{
-            throw new Error('Bad HTTP!')
-        }
-    })
-    .then( (j) =>{
-        console.log(j.currently.temperature, j.currently.summary);
-
-        console.log( j.daily.data[1] );
-        //console.log('JSON data provided');
-    })
-    .catch( (err) =>{
-        console.log('ERROR:', err.message);
+const https = require('https');
+exports.addWeather = function(request, response){
+  var lat = request.query.latitude;
+  var lng = request.query.longitude;
+  var new_data =
+  {
+    "message":"So Sorry! Will be up and running soon :)"
+  };
+  console.log(new_data);
+  data1.weather.push(new_data);
+  //let uri = 'http://jsonplaceholder.typicode.com/users';
+  let darksky = 'https://api.darksky.net/forecast/';
+  let key = 'b81e06b8089192d46b4f2ec270e18be6';
+  let uri = darksky + key + '/' + lat +','+ lng;
+  console.log(uri);
+  uri = uri.concat('?units=ca&exclude=minutely,hourly');
+  https.get(uri, res => {
+    res.setEncoding("utf8");
+    let body = "";
+    res.on("data", data => {
+      body += data;
     });
-*/
+    res.on("end", () => {
+      body = JSON.parse(body);
+      data1.weather.push(body);
+
+      response.render('weather',data1);
+    });
+  });
+}
