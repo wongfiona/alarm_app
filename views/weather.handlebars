@@ -9,7 +9,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
 		<script>
 			function goBack(){
 				window.history.back();
@@ -51,12 +51,21 @@
 {{#each weather}}
 		<div class="card" style="width: 100%">
 			<div class="card-body">
-				<p class="card-text">{{currently.summary}}</p>
-				<br>
-				<p class="card-text">This week it will be:{{daily.summary}}</p>
+				<p class="card-text">{{location}} {{currently.summary}}</p>
+				<!--<p class="card-text">This week it will be:{{daily.summary}}</p>-->
+				<canvas id="{{currently.time}}" width="128" height="128"></canvas>
+				<script src"/js/skycons.js"></script>
+				<script>
+				var skycons = new Skycons({"color": "pink"});
+				// ...or by the canvas DOM element itself.
+				skycons.add(document.getElementById("{{currently.time}}"), "{{currently.icon}}");
+				// if you're using the Forecast API, you can also supply
+				// strings: "partly-cloudy-day" or "rain".
+				// start animation!
+				skycons.play();
+				</script>
 			</div>
 		</div>
 {{/each}}
-
 	</body>
 </html>
