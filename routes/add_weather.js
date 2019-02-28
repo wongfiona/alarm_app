@@ -20,12 +20,16 @@ const https = require('https');
 exports.addWeather = function(request, response){
   var lat = request.query.latitude;
   var lng = request.query.longitude;
+
+  /*
   var new_data =
   {
     "message":"So Sorry! Will be up and running soon :)"
   };
   console.log(new_data);
   data1.weather.push(new_data);
+  */
+  
   //let uri = 'http://jsonplaceholder.typicode.com/users';
   let darksky = 'https://api.darksky.net/forecast/';
   let key = 'b81e06b8089192d46b4f2ec270e18be6';

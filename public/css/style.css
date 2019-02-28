@@ -40,7 +40,7 @@
 
 /* Weather card body on home screen */
 .weather {
-  background-color: #AAE0DE;
+  background-color: #8DD4D2;
   padding-left: 30px;
   margin: 15px 3px;
 }
@@ -232,8 +232,12 @@ input:checked + .slider:before {
   padding-right: 15px;
 }
 
-
 .remember {
   float: left;
   margin-top: 10px;
+}
+
+.facebookLogin {
+  margin-top: 10px;
+  padding-left: 15px;
 }
