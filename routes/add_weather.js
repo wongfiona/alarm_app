@@ -38,10 +38,10 @@ exports.addWeather = function(request, response){
     });
     res.on("end", () => {
       body = JSON.parse(body);
-      data1.weather.push({location: city});
+      body["location"] = city;
       data1.weather.push(body);
-      console.log(body)
+      console.log()
     });
+    response.render('weather',data1);
   });
-  response.render('weather',data1);
 }
