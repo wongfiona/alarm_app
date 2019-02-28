@@ -51,7 +51,9 @@
 {{#each weather}}
 		<div class="card" style="width: 100%">
 			<div class="card-body">
-				<p class="card-text">{{message}}</p>
+				<p class="card-text">{{currently.summary}}</p>
+				<br>
+				<p class="card-text">This week it will be:{{daily.summary}}</p>
 			</div>
 		</div>
 {{/each}}

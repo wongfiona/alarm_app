@@ -41,8 +41,7 @@ exports.addWeather = function(request, response){
     res.on("end", () => {
       body = JSON.parse(body);
       data1.weather.push(body);
-
-      response.render('weather',data1);
     });
   });
+  response.render('weather',data1);
 }

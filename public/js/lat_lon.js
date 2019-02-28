@@ -24,10 +24,9 @@ function initGoogleAPI() {
 		lng = place.geometry.location.lng();
     document.querySelector("#latitude").value = place.geometry.location.lat();
     document.querySelector("#longitude").value = place.geometry.location.lng();
+		$("#latitude").text(lat);
+		$("#longitude").text(lng);
 	});
 }
 
 insertGoogleScript();
-$("#latitude").text(lat);
-$("#longitude").text(lng);
-console.log(lat);

@@ -42,9 +42,11 @@ if ('development' == app.get('env')) {
 app.get('/', login.view);
 app.get('/alarms.html', alarms.view);
 app.get('/add_alarm', add_alarm.addAlarm);
+app.get('/...', login.view);
 
 app.get('/weather.html', weather.view);
 app.get('/add_weather', add_weather.addWeather);
+
 // Example route
 // app.get('/users', user.list);
 
