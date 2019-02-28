@@ -17,9 +17,12 @@
 var data1 = require('../data.json');
 //let fetch = require('node-fetch');
 const https = require('https');
+
+//pushes data to json file
 exports.addWeather = function(request, response){
   var lat = request.query.latitude;
   var lng = request.query.longitude;
+<<<<<<< HEAD
 
   /*
   var new_data =
@@ -30,6 +33,10 @@ exports.addWeather = function(request, response){
   data1.weather.push(new_data);
   */
   
+=======
+  var city = request.query.citySearch;
+
+>>>>>>> a512761ade5702e82a8f5a240cdc353403419c11
   //let uri = 'http://jsonplaceholder.typicode.com/users';
   let darksky = 'https://api.darksky.net/forecast/';
   let key = 'b81e06b8089192d46b4f2ec270e18be6';
@@ -44,7 +51,9 @@ exports.addWeather = function(request, response){
     });
     res.on("end", () => {
       body = JSON.parse(body);
+      data1.weather.push({location: city});
       data1.weather.push(body);
+      console.log(body)
     });
   });
   response.render('weather',data1);
