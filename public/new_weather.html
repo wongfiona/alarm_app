@@ -12,14 +12,14 @@
 
 		<script>
 			function goBack(){
-				window.history.back();
+				window.location.href = "weather.html";
 			}
 		</script>
 
 	</head>
 
 	<body>
-
+    <!--
 		<nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
 		  <a class="navbar-brand" href="index.html">Home</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -33,17 +33,17 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="weather.html">Weather</a>
 		      </li>
-					<!--
+
 		      <li class="nav-item">
 		        <a class="nav-link" href="trips.html">Trips</a>
 		      </li>
-				-->
+
 					<li class="nav-item">
 		        <a class="nav-link" href="...">Log Out</a>
 		      </li>
 		    </ul>
 		  </div>
-		</nav>
+		</nav>-->
     <!--
 		<form method="get" class="form" action='/add_weather'>
 					<fieldset>
@@ -83,7 +83,7 @@
 				<form id="addWeatherForm" role="form" method="get" action="/add_weather">
 					<div class="form-group">
 						<label for="city-search">Search:</label>
-						<input type="text" class="form-control" id="city-search" placeholder="e.g. San Diego, CA">
+						<input type="text" class="form-control" id="city-search" name="citySearch" placeholder="e.g. San Diego, CA">
 					</div>
 					<div class="form-group">
 						<label for="latitude">Latitude:</label>

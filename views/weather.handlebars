@@ -10,16 +10,12 @@
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
-		<script>
-			function goBack(){
-				window.history.back();
-			}
-		</script>
 
 	</head>
 
 	<body>
-
+		{{>"nav"}}
+    <!--
 		<nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
 		  <a class="navbar-brand" href="index.html">Home</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -33,20 +29,20 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="weather.html">Weather</a>
 		      </li>
-					<!--
+
 		      <li class="nav-item">
 		        <a class="nav-link" href="trips.html">Trips</a>
 		      </li>
-				-->
+
 					<li class="nav-item">
 						<a class="nav-link" href="...">Log Out</a>
 					</li>
 		    </ul>
 		  </div>
 		</nav>
-
+	-->
 		<div class="container-fluid weather-page-header">
-			<button class="btn btn-lg back-button" onclick="goBack()">&#8249; Back</button>
+			<button class="btn btn-lg back-button" ahref="index.html">&#8249; Back</button>
 			<a href="new_weather.html"><button class="addButton">+</button></a>
 			<h2 class="links" align="center">Weather</h2>
 		</div>
@@ -57,6 +53,7 @@
 				<p class="card-text">{{location}} {{currently.summary}}</p>
 				<!--<p class="card-text">This week it will be:{{daily.summary}}</p>-->
 				<canvas id="{{currently.time}}" width="128" height="128"></canvas>
+
 				<script src"/js/skycons.js"></script>
 				<script>
 				var skycons = new Skycons({"color": "pink"});

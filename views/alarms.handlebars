@@ -10,16 +10,11 @@
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
-		<script>
-			function goBack(){
-				window.history.back();
-			}
-		</script>
-
 	</head>
 
 	<body>
-
+		{{> "nav"}}
+    <!--
 		<nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
 		  <a class="navbar-brand" href="index.html">Home</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -33,20 +28,20 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="weather.html">Weather</a>
 		      </li>
-					<!--
+
 		      <li class="nav-item">
 		        <a class="nav-link" href="trips.html">Trips</a>
 		      </li>
-				-->
+
 					<li class="nav-item">
 						<a class="nav-link" href="...">Log Out</a>
 					</li>
 		    </ul>
 		  </div>
-		</nav>
+		</nav>-->
 
 		<div class="container alarms-page-header">
-			<button class="btn btn-lg back-button" onclick="goBack()">&#8249; Back</button>
+			<button class="btn btn-lg back-button" ahref="index.html">&#8249; Back</button>
 			<a href="new_alarm.html"><button class="addButton">+</button></a>
 			<h2 class="links" align="center">Alarms</h2>
 		</div>

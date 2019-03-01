@@ -23,7 +23,7 @@ exports.addWeather = function(request, response){
   var lat = request.query.latitude;
   var lng = request.query.longitude;
   var city = request.query.citySearch;
-
+  console.log(city);
   //let uri = 'http://jsonplaceholder.typicode.com/users';
   let darksky = 'https://api.darksky.net/forecast/';
   let key = 'b81e06b8089192d46b4f2ec270e18be6';
@@ -40,7 +40,7 @@ exports.addWeather = function(request, response){
       body = JSON.parse(body);
       body["location"] = city;
       data1.weather.push(body);
-      console.log()
+      console.log(body)
     });
     response.render('weather',data1);
   });
