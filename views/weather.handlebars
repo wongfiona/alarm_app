@@ -42,37 +42,11 @@
 		</nav>
 	-->
 		<div class="container-fluid weather-page-header">
-<<<<<<< HEAD
-			<button class="btn btn-lg back-button" ahref="index.html">&#8249; Back</button>
-=======
 			<a class="btn btn-lg back-button" href="index.html">&#8249; Back</a>
->>>>>>> af838aae0e20732d3b0ab9d79c4f62b9fc28fa8c
 			<a href="new_weather.html"><button class="addButton">+</button></a>
 			<h2 class="links" align="center">Weather</h2>
 		</div>
 
-<<<<<<< HEAD
-{{#each weather}}
-		<div class="card" style="width: 100%">
-			<div class="card-body">
-				<p class="card-text">{{location}} {{currently.summary}}</p>
-				<!--<p class="card-text">This week it will be:{{daily.summary}}</p>-->
-				<canvas id="{{currently.time}}" width="128" height="128"></canvas>
-
-				<script src"/js/skycons.js"></script>
-				<script>
-				var skycons = new Skycons({"color": "pink"});
-				// ...or by the canvas DOM element itself.
-				skycons.add(document.getElementById("{{currently.time}}"), "{{currently.icon}}");
-				// if you're using the Forecast API, you can also supply
-				// strings: "partly-cloudy-day" or "rain".
-				// start animation!
-				skycons.play();
-				</script>
-			</div>
-		</div>
-{{/each}}
-=======
 		{{#each weather}}
 				<div class="container weather-page" style="width: 100%">
 					<div class="card-body-weather">
@@ -93,6 +67,5 @@
 					</div>
 				</div>
 		{{/each}}
->>>>>>> af838aae0e20732d3b0ab9d79c4f62b9fc28fa8c
 	</body>
 </html>
