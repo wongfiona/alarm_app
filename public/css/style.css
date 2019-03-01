@@ -93,12 +93,12 @@
 }
 
 .card-body-weather {
-  background-color: #AAE0DE;
+  background-color: #B2EAE8;
   padding: 25px 10px 5px 10px;
   margin: 20px 5px 10px 10px;
 }
 
-.weather-page h4, p {
+.weather-page h5, h4, p {
   color: black;
 }
 
