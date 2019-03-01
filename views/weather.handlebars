@@ -46,7 +46,7 @@
 		</nav>
 
 		<div class="container-fluid weather-page-header">
-			<button class="btn btn-lg back-button" onclick="goBack()">&#8249; Back</button>
+			<a class="btn btn-lg back-button" href="index.html">&#8249; Back</a>
 			<a href="new_weather.html"><button class="addButton">+</button></a>
 			<h2 class="links" align="center">Weather</h2>
 		</div>
@@ -55,12 +55,12 @@
 				<div class="container weather-page" style="width: 100%">
 					<div class="card-body-weather">
 						<h4 class="card-title">{{location}}</h4>
-						<p>{{currently.summary}}</p>
+						<h5>{{currently.summary}}</h5>
 						<!--<p class="card-text">This week it will be:{{daily.summary}}</p>-->
 						<canvas id="{{currently.time}}" width="128" height="128"></canvas>
 						<script src"/js/skycons.js"></script>
 						<script>
-						var skycons = new Skycons({"color": "pink"});
+						var skycons = new Skycons({"color": "white"});
 						// ...or by the canvas DOM element itself.
 						skycons.add(document.getElementById("{{currently.time}}"), "{{currently.icon}}");
 						// if you're using the Forecast API, you can also supply
