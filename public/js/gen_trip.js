@@ -14,6 +14,8 @@ function insertGoogleScript() {
 }
 
 function initMap() {
+var dest = null;
+var ori = null;
 var map = new google.maps.Map(document.getElementById('map'), {
 mapTypeControl: false,
 center: {lat: -33.8688, lng: 151.2195},
@@ -21,6 +23,7 @@ zoom: 13
 });
 
 new AutocompleteDirectionsHandler(map);
+
 }
 
 /**
@@ -31,6 +34,9 @@ this.map = map;
 this.originPlaceId = null;
 this.destinationPlaceId = null;
 this.travelMode = 'WALKING';
+this.origin = document.getElementById('origin-input');
+this.destination = document.getElementById('destination-input');
+
 this.directionsService = new google.maps.DirectionsService;
 this.directionsDisplay = new google.maps.DirectionsRenderer;
 this.directionsDisplay.setMap(map);
@@ -60,6 +66,9 @@ this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
 this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(
   destinationInput);
 this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
+
+//ori = originPlaceId;
+//dest = destinationPlaceId;
 }
 
 // Sets a listener on a radio button to change the filter type on Places
@@ -89,8 +98,10 @@ if (!place.place_id) {
 }
 if (mode === 'ORIG') {
   me.originPlaceId = place.place_id;
+	document.querySelector("#ori-input").value = me.origin.value;
 } else {
   me.destinationPlaceId = place.place_id;
+	document.querySelector("#dest-input").value = me.destination.value;
 }
 me.route();
 });

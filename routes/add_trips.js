@@ -5,7 +5,7 @@ exports.addTrip = function(request, response){
 
   console.log(start);
   console.log(end);
-  
+
   var new_data =
   {
     "origin": start,
