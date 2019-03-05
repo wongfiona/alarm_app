@@ -242,6 +242,10 @@ input:checked + .slider:before {
   padding-left: 15px;
 }
 
+fb:login-button {
+  align: left;
+}
+
 /* Map Stuff */
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */

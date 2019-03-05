@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Test Page</title>
+		<title>Alarmio B</title>
 		<meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
 
 	<div class="container">
 		<div class="card-body alarms">
-			<h2>Good Morning! </h2>
+			<h2>Good Morning!</h2>
 			<h3>
 				<button data-toggle="collapse" data-target="#a_collap">Alarms
 					<span class="caret"></span>
@@ -34,7 +34,6 @@
 			</h3>
 
 			<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:left;">
-			<p>Set for 6:00AM</p>
 
 			{{#each alarms}}
 					<div class="container alarms-page" id="{{alarmID}}" style="width: 100%">
@@ -56,11 +55,12 @@
 
 	<div class="container">
 		<div class="card-body weather">
-      <h4>
+			<!--
+		  <h4>
         <img class="img-fluid" src="images/rain.png" alt="Weather" width="80px" style="float:left;">
         La Jolla</h4>
       <p>Light showers</p>
-		<!--	<h3 class="card-title"><a class="links" href="weather.html">Weather</a>
+			<h3 class="card-title"><a class="links" href="weather.html">Weather</a>
 				<button>&#8250;</button></h3> -->
 
       <button data-toggle="collapse" data-target="#w_collap">Weather

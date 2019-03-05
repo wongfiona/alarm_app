@@ -10,11 +10,16 @@
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
+		<script>
+			function goBack(){
+				window.history.back();
+			}
+		</script>
+
 	</head>
 
 	<body>
-		{{> "nav"}}
-    <!--
+
 		<nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
 		  <a class="navbar-brand" href="index.html">Home</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -28,39 +33,36 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="weather.html">Weather</a>
 		      </li>
-
 		      <li class="nav-item">
 		        <a class="nav-link" href="trips.html">Trips</a>
 		      </li>
-
 					<li class="nav-item">
-						<a class="nav-link" href="...">Log Out</a>
-					</li>
+		        <a class="nav-link" href="...">Log Out</a>
+		      </li>
 		    </ul>
 		  </div>
-		</nav>-->
+		</nav>
 
-		<div class="container alarms-page-header">
-			<a class="btn btn-lg back-button" href="index.html">&#8249; Back</a>
-			<a href="new_alarm.html"><button class="addButton">+</button></a>
-			<h2 class="links" align="center">Alarms</h2>
+		<div class="container-fluid trips-page-header">
+			<button class="btn btn-lg back-button" onclick="goBack()">&#8249; Back</button>
+			<h2 class="links" align="center">Add New Trip</h2>
 		</div>
 
-		{{#each alarms}}
-				<div class="container alarms-page" id="{{alarmID}}" style="width: 100%">
-					<div class="card-body alarms-box">
-						<h3 class="card-title">
-							<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">{{alarmTime}}</h3>
+		<div class="card" style="width: 100%">
+			<div class="card-body">
 
-						<!-- Rounded switch -->
-						<label class="switch">
-						  <input type="checkbox" checked>
-						  <span class="slider round"></span>
-						</label>
-						<p class="card-text">{{alarmName}}</p>
-					</div>
-				</div>
-		{{/each}}
+				<form>
+					Enter starting location: <br>
+					<input class="form-control input-sm" id="alarmfield" type="text"><br>
+					Enter destination: <br>
+					<input class="form-control input-sm" id="alarmfield" type="text"><br>
+					Save trip name as: <br>
+					<input class="form-control input-sm" id="alarmfield" type="text"><br>
+					<a href="trips.html" class="btn add-trip">Save</a>
+				</form>
+
+			</div>
+		</div>
 
 	</body>
 </html>
