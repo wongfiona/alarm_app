@@ -19,48 +19,25 @@
 	</head>
 
   <body>
-    <!--NavBar code block-->
-		<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-		  <a class="navbar-brand" href="index.html">Home</a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
-		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-		    <ul class="navbar-nav">
-		      <li class="nav-item">
-		        <a class="nav-link" href="alarms.html">Alarms</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="weather.html">Weather</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="trips.html">Trips</a>
-		      </li>
-		    </ul>
-		  </div>
-		</nav>
-    
-    <!-- Link to add weather page-->
-		<div class="container-fluid">
-			<button class="btn btn-sm" onclick="goBack()">&#8249; Back</button>
-			<a href="new_alarm.html"><button class="addButton">+</button></a>
-			<h2 align="center">Alarms</h2>
+    <!--PUT IN CONNECTION TO NAV BAR-->
+		{{> "nav"}}
+    <!--NEED BACK BUTTON-->
+
+		<!-- Add Burron and Title-->
+		<div class="container-fluid weather-page-header">
+			<a class="btn btn-lg back-button" href="index.html">&#8249; Back</a>
+			<a href="new_trips.html"><button class="addButton">+</button></a>
+			<h2 class="links" align="center">Trips</h2>
 		</div>
 
-    <!--Loops through the weather cards-->
-    {{#each alarms}}
-		<div class="card" id="{{alarmID}}" style="width: 100%">
+    <!--Loop through the trips section-->
+    {{#each trips}}
+		<div class="card" style="width: 100%">
 			<div class="card-body">
 				<h3 class="card-title" align="left">
-					<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">{{alarmTime}}</h3>
-
-				<!-- Rounded switch -->
-				<label class="switch">
-				  <input type="checkbox" checked>
-				  <span class="slider round"></span>
-				</label>
-
-				<p class="card-text">{{alarmName}}</p>
+					<img style="float:right">Your Trip</h3>
+				<p class="card-text">{{origin}}</p>
+				<p class="card-text">{{destination}}</p>
 			</div>
 		</div>
     {{/each}}

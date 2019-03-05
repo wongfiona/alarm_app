@@ -12,7 +12,8 @@
 	</head>
 
 	<body>
-
+		{{> "nav"}}
+<!--
 		<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
 		  <a class="navbar-brand" href="#">Navbar</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -26,20 +27,49 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="#">Weather</a>
 		      </li>
-					
+
 		      <li class="nav-item">
 		        <a class="nav-link" href="#">Trips</a>
 		      </li>
 		    </ul>
 		  </div>
 		</nav>
+	-->
+	<div class="container">
+		<div class="card-body alarms">
+			<h2>Good Morning! </h2>
+			<h3>
+				<a class="links" href="alarms.html">Alarms</a><button>&#8250;</button>
+				<!-- Rounded switch -->
+				<label class="switch">
+					<input type="checkbox" checked>
+					<span class="slider round"></span>
+				</label>
+			</h3>
 
+			<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:left;">
+			<p>Set for 6:00AM</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="card-body weather">
+			<h3 class="card-title"><a class="links" href="weather.html">Weather</a>
+				<button>&#8250;</button></h3>
+			<h4>
+				<img class="img-fluid" src="images/rain.png" alt="Weather" width="80px" style="float:left;">
+				La Jolla</h4>
+			<p>Light showers</p>
+
+		</div>
+	</div>
+	<!--
 		<div class="card" style="width: 100%">
 			<div class="card-body">
 				<h2 class="card-title" align="center">Good Morning!</h2>
 				<h3 align="center"><img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">8:00AM</h3>
 
-				<!-- Rounded switch -->
+
 				<label class="switch">
 				  <input type="checkbox" checked>
 				  <span class="slider round"></span>
@@ -56,7 +86,7 @@
 		    <p class="card-text">Weather card</p>
 		  </div>
 		</div>
-
+-->
 		<!--
 		<div class="card" style="width: 100%">
 		  <div class="card-body">
@@ -65,7 +95,17 @@
 		    <p class="card-text">Trips card</p>
 		  </div>
 		</div>
-	  -->
-
+	-->
+	<div class="card" id="trips" style="width: 100%">
+		<div class="card-body">
+			<h3 class="card-title"><a class="links" href="trips.html">Trips</a></h3>
+			<h4>Home to School</h4>
+			<img class="img-fluid" src="images/map.jpg" alt="Map" width="154px" style="float:left;">
+			<h5> Current Traffic:</h5>
+			<p> Heavy </p>
+			<h5> ETA: </h5>
+			<p> 20 minutes </p>
+		</div>
+	</div>
 	</body>
 </html>
