@@ -30,27 +30,27 @@
 				</label>
 
 				<div id="a_collap" class="collapse">
-					Lorem ipsum....
-					{{#each alarms}}
-							<div class="container alarms-page" id="{{alarmID}}" style="width: 100%">
-								<div class="card-body alarms-box">
-									<h3 class="card-title">
-										<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">{{alarmTime}}</h3>
-
-									<!-- Rounded switch -->
-									<label class="switch">
-										<input type="checkbox" checked>
-										<span class="slider round"></span>
-									</label>
-									<p class="card-text">{{alarmName}}</p>
-								</div>
-							</div>
-					{{/each}}
 				</div>
 			</h3>
 
 			<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:left;">
 			<p>Set for 6:00AM</p>
+
+			{{#each alarms}}
+					<div class="container alarms-page" id="{{alarmID}}" style="width: 100%">
+						<div class="card-body alarms-box">
+							<h3 class="card-title">
+								<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">{{alarmTime}}</h3>
+
+							<!-- Rounded switch -->
+							<label class="switch">
+								<input type="checkbox" checked>
+								<span class="slider round"></span>
+							</label>
+							<p class="card-text">{{alarmName}}</p>
+						</div>
+					</div>
+			{{/each}}
 		</div>
 	</div>
 
@@ -66,30 +66,46 @@
       <button data-toggle="collapse" data-target="#w_collap">Weather
         <span class="caret"></span>
       </button>
-      <div id="w_collap" class="collapse">
-        Lorem Ipsum ....
-      {{#each weather}}
-      Killroy was heres
-      		<div class="card" style="width: 100%">
-      			<div class="card-body">
-      				<p class="card-text">{{location}} {{currently.summary}}</p>
-      				<!--<p class="card-text">This week it will be:{{daily.summary}}</p>-->
-      				<canvas id="{{currently.time}}" width="128" height="128"></canvas>
-              <script src"/js/skycons.js"></script>
-              <script>
-              var skycons = new Skycons({"color": "pink"});
-              // ...or by the canvas DOM element itself.
-              skycons.add(document.getElementById("{{currently.time}}"), "{{currently.icon}}");
-              // if you're using the Forecast API, you can also supply
-              // strings: "partly-cloudy-day" or "rain".
-              // start animation!
-              skycons.play();
-              </script>
-      			</div>
-      		</div>
-      {{/each}}
-    </div>
+      <div id="w_collap" class="collapse"></div>
+			{{#each weather}}
+					<div class="container weather-page" style="width: 100%">
+						<div class="card-body-weather">
+							<h4 class="card-title">{{location}}</h4>
+							<h5>{{currently.summary}}</h5>
+							<!--<p class="card-text">This week it will be:{{daily.summary}}</p>-->
+							<canvas id="{{currently.time}}" width="128" height="128"></canvas>
+							<script src"/js/skycons.js"></script>
+							<script>
+							var skycons = new Skycons({"color": "white"});
+							// ...or by the canvas DOM element itself.
+							skycons.add(document.getElementById("{{currently.time}}"), "{{currently.icon}}");
+							// if you're using the Forecast API, you can also supply
+							// strings: "partly-cloudy-day" or "rain".
+							// start animation!
+							skycons.play();
+							</script>
+						</div>
+					</div>
+			{{/each}}
 		</div>
 	</div>
+
+	<div class="container">
+		<div class="card-body weather">
+			<h3 class="card-title"><a class="links" href="trips.html">Trips</a></h3>
+			<!--Loop through the trips section-->
+			{{#each trips}}
+			<div class="container weather-page" style="width: 100%">
+				<div class="card-body-weather">
+					<h3 class="card-title" align="left">
+						<img style="float:right">Your Trip</h3>
+					<p class="card-text">{{origin}}</p>
+					<p class="card-text">{{destination}}</p>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+
 </body>
 </html>
