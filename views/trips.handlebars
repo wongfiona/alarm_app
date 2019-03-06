@@ -18,7 +18,7 @@
     <!--NEED BACK BUTTON-->
 
 		<!-- Add Button and Title-->
-		<div class="container-fluid weather-page-header">
+		<div class="container-fluid trips-page-header">
 			<a class="btn btn-lg back-button" href="index.html">&#8249; Back</a>
 			<a href="new_trips.html"><button class="addButton">+</button></a>
 			<h2 class="links" align="center">Trips</h2>
@@ -26,8 +26,8 @@
 
     <!--Loop through the trips section-->
     {{#each trips}}
-		<div class="card" style="width: 100%">
-			<div class="card-body">
+		<div class="container" style="width: 100%">
+			<div class="card-body-trips">
 				<h3 class="card-title" align="left">
 					<img style="float:right">Your Trip</h3>
 				<p class="card-text">{{origin}}</p>
