@@ -25,18 +25,22 @@
 .alarms h2 {
   text-align: center;
   margin-bottom: 40px;
-}
-
-.alarms p {
-  text-align: right;
   color: white;
 }
+
+/*
+.alarms p {
+  text-align: left;
+  color: black;
+}
+
 
 .alarms h2, h3, button, p,
 .weather h4,
 .trips h4, h5 {
   color: white;
 }
+*/
 
 /* Weather card body on home screen */
 .weather {
@@ -48,7 +52,7 @@
 .weather p, h4,
 .trips p, h5 {
   text-align: center;
-  color: white;
+  color: black;
 }
 
 /* Trips card body on home screen */
@@ -71,6 +75,11 @@
 .alarms-box {
   background-color: #FFD1D1;
   margin: 20px 5px 10px 10px;
+}
+
+.alarms-box2 {
+  background-color: #FFD1D1;
+  margin: 20px -5px 5px -10px;
 }
 
 .alarms-page h3, p {
@@ -98,12 +107,29 @@
   margin: 20px 5px 10px 10px;
 }
 
+.card-body-weather2 {
+  background-color: #B2EAE8;
+  padding: 25px 20px 15px 20px;
+  margin: 10px -5px 20px -15px;
+}
+
 .weather-page h5, h4, p {
   color: black;
 }
 
 .add-weather {
   background-color: #8DD4D2;
+  color: white;
+}
+
+.temp {
+  margin-top: 40px;
+  margin-right: 10px;
+  color: white;
+}
+
+.temp2 {
+  margin-top: -70px;
   color: white;
 }
 
@@ -117,6 +143,12 @@
   background-color: #D2DFEF;
   padding: 20px 20px;
   margin: 20px 5px;
+}
+
+.card-body-trips2 {
+  background-color: #D2DFEF;
+  padding: 20px 20px;
+  margin: 20px -5px 10px -15px;
 }
 
 .card-body-trips h5, p {
@@ -139,7 +171,8 @@
 .addButton {
   float: right;
   font-size: 25px;
-  margin-right: -10px;
+  margin-right: 5px;
+  color: white;
 }
 
 /* The switch - the box around the slider */
@@ -242,18 +275,25 @@ input:checked + .slider:before {
   padding-left: 15px;
 }
 
+fb:login-button {
+  align: left;
+}
+
 /* Map Stuff */
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
+
 #map {
   height: 100%;
 }
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
 .controls {
   margin-top: 10px;
   border: 1px solid transparent;

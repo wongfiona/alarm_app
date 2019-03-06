@@ -39,32 +39,28 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	</head>
 
 	<body>
+		<!--CONNECTION TO NAV BAR-->
 		{{> "nav"}}
 
 	<div class="container">
 		<div class="card-body alarms">
-			<h2>Good Morning! </h2>
 			<h3>
-				<button data-toggle="collapse" data-target="#a_collap">Alarms
-					<span class="caret"></span>
-				</button>
+				<a class="links" href="alarms.html">Alarms &#8250;</a>
 
-				<!-- Rounded switch -->
+				<!--
+				<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right;">
+
+				 Rounded switch
 				<label class="switch">
 					<input type="checkbox" checked>
 					<span class="slider round"></span>
 				</label>
-
-				<div id="a_collap" class="collapse">
-				</div>
+				-->
 			</h3>
-
-			<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:left;">
-			<p>Set for 6:00AM</p>
 
 			{{#each alarms}}
 					<div class="container alarms-page" id="{{alarmID}}" style="width: 100%">
-						<div class="card-body alarms-box">
+						<div class="card-body alarms-box2">
 							<h3 class="card-title">
 								<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right">{{alarmTime}}</h3>
 
@@ -82,24 +78,17 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 	<div class="container">
 		<div class="card-body weather">
-      <h4>
-        <img class="img-fluid" src="images/rain.png" alt="Weather" width="80px" style="float:left;">
-        La Jolla</h4>
-      <p>Light showers</p>
-		<!--	<h3 class="card-title"><a class="links" href="weather.html">Weather</a>
-				<button>&#8250;</button></h3> -->
+      <h3 class="card-title"><a class="links" href="weather.html">Weather &#8250;</a></h3>
 
-      <button data-toggle="collapse" data-target="#w_collap">Weather
-        <span class="caret"></span>
-      </button>
-      <div id="w_collap" class="collapse"></div>
 			{{#each weather}}
 					<div class="container weather-page" style="width: 100%">
-						<div class="card-body-weather">
+						<div class="card-body-weather2">
 							<h4 class="card-title">{{location}}</h4>
 							<h5>{{currently.summary}}</h5>
 							<!--<p class="card-text">This week it will be:{{daily.summary}}</p>-->
 							<canvas id="{{currently.time}}" width="128" height="128"></canvas>
+							<h2 class="temp2" style="float:right;">{{currently.temperature}} &#8451;</h2>
+
 							<script src"/js/skycons.js"></script>
 							<script>
 							var skycons = new Skycons({"color": "white"});
@@ -116,13 +105,13 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		</div>
 	</div>
 
-	<div class="container trips">
-		<!--<div class="card-body trips">-->
-			<h3 class="card-title"><a class="links" href="trips.html">Trips</a></h3>
+	<div class="container">
+		<div class="card-body trips">
+			<h3 class="card-title"><a class="links" href="trips.html">Trips &#8250;</a></h3>
 			<!--Loop through the trips section-->
 			{{#each trips}}
-			<!--<div class="container trips-page" style="width: 100%">-->
-				<div class="card-body trips">
+			<div class="container" style="width: 100%">
+				<div class="card-body-trips2">
 					<h3 class="card-title" align="left">
 						<img style="float:right">Your Trip</h3>
 					<p class="card-text">{{origin}}</p>

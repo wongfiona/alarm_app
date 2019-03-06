@@ -21,9 +21,10 @@
       </script>
   </head>
   <body>
-    <div class="container-fluid weather-page-header">
+    {{> "nav"}}
+
+    <div class="container-fluid trips-page-header">
       <button class="btn btn-lg back-button" onclick="goBack()">&#8249; Back</button>
-      <a href="add_trips.html"><button>Save</button></a>
       <h2 class="links" align="center">Add New Trip</h2>
     </div>
 
@@ -31,17 +32,19 @@
       <div class="card-body">
         <form id="addTripForm" role="form" method="get" action="/add_trip">
 
+           Starting location:
             <div class="form-group">
             <label for="ori-input"></label>
             <input name="origin" id="ori-input" class="form-control" type="text">
             </div>
 
+            Destination:
             <div class="form-group">
             <label for="dest-input"></label>
             <input name="destination" id="dest-input" class="form-control" type="text">
             </div>
 
-            <input type="submit" id="submitBtn" class="btn add-weather" value="Get Trip"></input>
+            <input type="submit" id="submitBtn" class="btn add-trip" value="Save Trip"></input>
           </form>
         </div>
       </div>
