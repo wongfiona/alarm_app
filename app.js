@@ -49,7 +49,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/index.html', index.view);
+//app.get('/index.html', index.view);
 app.get('/index.html', indexB.view);
 
 app.get('/', login.view);
