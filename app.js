@@ -49,8 +49,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-//app.get('/index.html', index.view);
-app.get('/index.html', indexB.view);
+app.get('/indexA', index.view);
+app.get('/indexB', indexB.view);
 
 app.get('/', login.view);
 app.get('/alarms.html', alarms.view);
