@@ -41,36 +41,26 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		<!--CONNECTION TO NAV BAR-->
 		{{> "nav"}}
 
-	<div class="container">
-		<div class="card-body alarms">
+	<div class="container" onclick="ga( 'create', 'UA-135646748-1', 'auto' ); ga('send', 'event', 'links', 'clcick');">
+		<div class="card-body alarms" onclick="ga( 'create', 'UA-135646748-1', 'auto' ); ga('send', 'event', 'links', 'clcick');">
 			<h3>
-				<a class="links" href="alarms.html">Alarms &#8250;</a>
-
-				<!--
-				<img class="img-fluid" src="images/alarm.png" alt="Alarm clock icon" style="float:right;">
-
-				Rounded switch
-				<label class="switch">
-					<input type="checkbox" checked>
-					<span class="slider round"></span>
-				</label>
-			-->
+				<a href="alarms.html">Alarms &#8250;</a>
 			</h3>
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" onclick="ga( 'create', 'UA-135646748-1', 'auto' ); ga('send', 'event', 'links', 'clcick');">
 		<div class="card-body weather">
 			<h3 class="card-title"><a class="links" href="weather.html">Weather &#8250;</a></h3>
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" onclick="ga( 'create', 'UA-135646748-1', 'auto' ); ga('send', 'event', 'links', 'clcick');">
 		<div class="card-body trips">
 			<h3 class="card-title"><a class="links" href="trips.html">Trips &#8250;</a></h3>
 		</div>
 	</div>
 
-	<script src="/js/analyticsIndex.js"></script>
+	<!--<script src="/js/analyticsIndex.js"></script>-->
 	</body>
 </html>
