@@ -52,7 +52,7 @@ if ('development' == app.get('env')) {
 app.get('/indexA', index.view);
 app.get('/indexB', indexB.view);
 
-app.get('/index.html', index.view);
+app.get('/index.html', indexB.view);
 
 app.get('/', login.view);
 app.get('/alarms.html', alarms.view);
