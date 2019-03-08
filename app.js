@@ -52,6 +52,8 @@ if ('development' == app.get('env')) {
 app.get('/indexA', index.view);
 app.get('/indexB', indexB.view);
 
+app.get('/index.html', index.view);
+
 app.get('/', login.view);
 app.get('/alarms.html', alarms.view);
 app.get('/trips.html',trips.view);
@@ -67,8 +69,6 @@ app.get('/new_trips.html', new_trips.view);
 app.get('/add_weather', add_weather.addWeather);
 app.get('/add_trip', add_trip.addTrip);
 
-//For A/B testing
-app.get('/indexB', indexB.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
