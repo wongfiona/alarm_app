@@ -69,8 +69,6 @@ app.get('/new_trips.html', new_trips.view);
 app.get('/add_weather', add_weather.addWeather);
 app.get('/add_trip', add_trip.addTrip);
 
-//For A/B testing
-app.get('/indexB', indexB.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
